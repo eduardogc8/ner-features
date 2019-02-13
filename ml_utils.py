@@ -1,3 +1,5 @@
+
+
 def myHotEncode(input_data, max_vocab=0, vocab2idx=None):
     "Return the hot-vecotor and the vocab2idx."
 
@@ -28,7 +30,7 @@ def myHotEncode(input_data, max_vocab=0, vocab2idx=None):
             if j in vocab2idx:
                 i_.append(vocabEmbeddings[vocab2idx[j]])
         if len(i_) == 0:
-            i_ = np.zeros((1,len(vocab2idx)))
+            i_ = np.zeros((1, len(vocab2idx)))
         data_ret.append(sum(i_))
     return data_ret, vocab2idx
 
